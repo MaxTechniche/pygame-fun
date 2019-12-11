@@ -15,7 +15,7 @@ class Point():
     def __init__(self, x, y=None, distance=None, height=None, connections=None):
         self.x = x
         self.y = y if y else horizon
-        self.distance = distance if distance else 2
+        self.distance = distance if distance else .5
         self.distance_x = self.distance
         self.height = height
         if not self.height:

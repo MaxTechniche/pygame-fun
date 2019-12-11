@@ -11,7 +11,7 @@ fps = 0 # FPS 0 equals as fast as possible
 cell_lock = True
 
 
-window_size = (1920,1080)
+window_size = (1600,900)
 char_size = max(2, round(window_size[0] / max(1, number_of_columns)))
 
 colors = {
