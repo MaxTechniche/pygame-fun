@@ -154,7 +154,6 @@ while running:
         t += 1
         
     #point_grid.insert(0, [Point(x) for x in range(0, window_width+1, window_width//columns)])
-    print(len(point_grid))
 
 pygame.quit()
 

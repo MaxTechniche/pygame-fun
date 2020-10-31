@@ -18,7 +18,7 @@ class Star():
 
         self.color = color
         if not self.color:
-            self.color = universal_color
+            self.color = (random.randint(200, 255), random.randint(200, 255), random.randint(200, 255)) # universal_color
 
         self.size = random.randint(1, 2)
         self.x_s = self.x_speed()
@@ -54,6 +54,8 @@ while running:
         if event.type == KEYDOWN:
             if event.key == K_ESCAPE:
                 running = False
+        elif event.type == QUIT:
+            running = False
 
     for _ in range(spawn_rate):
         stars.append(Star())

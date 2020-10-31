@@ -129,7 +129,7 @@ def on_click(mouse_click_position):
     return new_style
 
 pygame.init()
-surface = pygame.display.set_mode(window_size, flags=(pygame.FULLSCREEN))
+surface = pygame.display.set_mode(window_size)#, flags=(pygame.FULLSCREEN))
 pygame.display.set_caption('Matrix')
 
 window_x = surface.get_width()
@@ -145,6 +145,7 @@ running = True
 char_root_list = []
 drop_wait = 0
 while running:
+    print(len(char_root_list))
     if spawn_rate >= 1:
         for _ in range(int(spawn_rate)):
             char_root_list.append(Char(calc_x(), 0-char_size, char_size, color=color()))
@@ -217,7 +218,7 @@ while running:
     # Create new character below each current character on screen
     for char in prev_char_root_list:
         # If character is offscreen, don't bother making another character
-        if char.y < 0-char_size or char.x > window_x:
+        if char.y > window_size[1]+char_size or char.x > window_x:
             continue
         new_char = Char(char.x, char.y+char_size, char_size, color=color(char))
         char_root_list.append(new_char)

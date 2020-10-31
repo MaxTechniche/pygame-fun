@@ -63,6 +63,8 @@ while running:
                 elif event.key == K_ESCAPE:
                     choice = True
                     running = False
+            elif event.type == QUIT:
+                running = False
 
     blocks = blocks_buffer[:]
     blocks_buffer.clear()

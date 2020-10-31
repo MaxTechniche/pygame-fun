@@ -56,6 +56,8 @@ while running:
         if event.type == pygame.locals.KEYDOWN:
             if event.key == pygame.locals.K_ESCAPE:
                 running = False
+        if event.type == pygame.QUIT:
+            running = False
 
     for row in range(len(cell_buffer)):
         for column in range(len(cell_buffer[row])):
