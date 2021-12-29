@@ -18,11 +18,14 @@ class Star():
 
         self.color = color
         if not self.color:
-            self.color = (random.randint(200, 255), random.randint(200, 255), random.randint(200, 255)) # universal_color
+            self.color = (random.randint(200, 255), random.randint(
+                200, 255), random.randint(200, 255))  # universal_color
 
         self.size = random.randint(1, 2)
         self.x_s = self.x_speed()
         self.y_s = self.y_speed()
+        self.x = window_width/2
+        self.y = window_height/2
 
     def x_speed(self):
         return (self.x - window_width/2) / (window_width/2) * speed
@@ -39,7 +42,7 @@ window_width = 600
 window_height = 600
 window_size = (window_width, window_height)
 
-speed = 5
+speed = 50
 spawn_rate = 10
 max_stars = 0
 
